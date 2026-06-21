@@ -1,5 +1,4 @@
 @import "../waybar/color.css";
-@import "matugen.css";
 
 * {
   font-family: "Maple Mono NF", "Adwaita Sans", sans-serif;
@@ -67,4 +66,3 @@
 .critical {
   border-color: @red;
 }
-

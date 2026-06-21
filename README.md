@@ -19,7 +19,7 @@ chezmoi init --apply git@github.com:MareDevi/dots.git
 - Ghostty, mpv, yazi, zathura, btop, cava, fastfetch, bat, micro, lazygit, satty, and udiskie
 - EasyEffects, pavucontrol, Okular, Atuin config, mise config, and selected Sunshine config
 - VS Code user settings and snippets only
-- Optional modern shell helpers: SwayNC, SwayOSD, Fuzzel, Matugen, Walker, and Hyprpicker configs/scripts
+- Optional modern shell helpers: SwayNC, SwayOSD, Fuzzel, Walker, and Hyprpicker configs/scripts
 - Desktop autostart entries and MIME associations
 - fcitx5 input method settings
 - Kvantum theme selection
@@ -39,7 +39,7 @@ or encrypted file after reviewing the generated source.
 
 The Hyprland config keeps fallbacks for systems without the newer shell helpers.
 To enable SwayNC notifications, SwayOSD media indicators, Fuzzel launcher, and
-Matugen wallpaper colors:
+the helper tools while keeping the Catppuccin Macchiato theme:
 
 ```sh
 ~/.config/hypr/scripts/setup/install-modern-shell
