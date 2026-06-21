@@ -1,0 +1,34 @@
+# Local editor and OS noise
+.DS_Store
+*~
+*.swp
+*.tmp
+
+# Never commit raw secret material.
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.age
+*.asc
+id_*
+known_hosts
+authorized_keys
+
+# Common credential/config files that should be reviewed or encrypted first.
+dot_aws/
+dot_gnupg/
+dot_kube/
+dot_password-store/
+dot_ssh/
+dot_wakatime.cfg
+private_dot_config/gh/hosts.yml
+private_dot_config/rclone/rclone.conf
+private_dot_config/**/Cookies*
+private_dot_config/**/Local State
+private_dot_config/**/Network Persistent State
+private_dot_config/**/Preferences
+private_dot_config/**/Trust Tokens*
+private_dot_config/**/SharedStorage*
+

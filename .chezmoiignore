@@ -1,0 +1,26 @@
+# This repository intentionally tracks only reviewed, portable config.
+# Add sensitive machine-specific files only after templating or encryption.
+
+README.md
+
+.ssh/**
+.gnupg/**
+.aws/**
+.kube/**
+.password-store/**
+.wakatime.cfg
+
+.config/gh/hosts.yml
+.config/rclone/rclone.conf
+.config/pulse/cookie
+
+# Browser/Electron application state often contains cookies, device IDs,
+# tokens, recent files, and local databases.
+.config/**/Cookies*
+.config/**/Local State
+.config/**/Network Persistent State
+.config/**/Preferences
+.config/**/Trust Tokens*
+.config/**/SharedStorage*
+.config/**/DIPS*
+.config/**/TransportSecurity

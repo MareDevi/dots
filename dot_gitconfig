@@ -1,0 +1,16 @@
+[user]
+	name = MareDevi
+	email = me@maredevi.moe
+	signingkey = 1E1602F430899259
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

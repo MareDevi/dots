@@ -1,0 +1,67 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "proxy": "",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "buffer_font_family": "Maple Mono NF",
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
+    "Kimi Code CLI": {
+      "type": "custom",
+      "command": "kimi",
+      "args": [
+        "acp"
+      ],
+      "env": {}
+    }
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "gpt-5.5",
+      "enable_thinking": true,
+      "effort": "medium"
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
+  },
+}
