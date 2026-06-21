@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+focused_monitor() {
+    hyprctl monitors -j 2>/dev/null | jq -r '.[] | select(.focused == true).name' 2>/dev/null | head -n1
+}
+
+with_swayosd() {
+    command -v swayosd-client >/dev/null 2>&1 && pgrep -x swayosd-server >/dev/null 2>&1
+}
+
+monitor="$(focused_monitor)"
+monitor_args=()
+[ -n "${monitor}" ] && monitor_args=(--monitor "$monitor")
+action="${1:-play-pause}"
+
+if with_swayosd; then
+    swayosd-client "${monitor_args[@]}" --playerctl "$action"
+else
+    playerctl "$action"
+fi

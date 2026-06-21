@@ -1,4 +1,5 @@
 @import "color.css";
+@import "matugen.css";
 
 * {
   font-family: Maple Mono NF;
@@ -42,6 +43,7 @@
 #window,
 #custom-music,
 #tray,
+#custom-notifications,
 #idle_inhibitor,
 #cpu,
 #memory,
@@ -203,6 +205,12 @@
 #tray {
   margin-right: 1rem;
   border-radius: 1rem;
+}
+
+#custom-notifications {
+  color: @yellow;
+  border-radius: 1rem;
+  margin-right: 0.75rem;
 }
 
 tooltip {

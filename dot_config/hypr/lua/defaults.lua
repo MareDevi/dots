@@ -6,6 +6,7 @@ return {
 	browser = "google-chrome-stable",
 	file_manager = "nautilus",
 	launcher = launcher,
+	launcher_apps = "command -v fuzzel >/dev/null 2>&1 && fuzzel || " .. launcher .. " toggle",
 	launcher_toggle = launcher .. " toggle",
 	launcher_windows = deeplink .. "'vicinae://launch/wm/switch-windows?toggle=true'",
 	launcher_clipboard = deeplink .. "'vicinae://launch/clipboard/history?toggle=true'",

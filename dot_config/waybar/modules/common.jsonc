@@ -18,6 +18,12 @@
         "icon-size": 21,
         "spacing": 10
     },
+    "custom/notifications": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "command -v swaync-client >/dev/null 2>&1 && swaync-client -t -sw",
+        "on-click-right": "command -v swaync-client >/dev/null 2>&1 && swaync-client -d"
+    },
     "custom/music": {
         "format": "  {}",
         "escape": true,

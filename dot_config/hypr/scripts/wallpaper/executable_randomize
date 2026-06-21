@@ -58,3 +58,7 @@ fi
 if command -v magick >/dev/null 2>&1 && [ -f "${external_pick}" ]; then
     magick "${external_pick}" -blur "10x10" -brightness-contrast -20% "${lockscreen_wall}"
 fi
+
+if command -v matugen >/dev/null 2>&1 && [ -f "${external_pick}" ]; then
+    matugen image "${external_pick}" >/dev/null 2>&1 || true
+fi

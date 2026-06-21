@@ -1,0 +1,70 @@
+@import "../waybar/color.css";
+@import "matugen.css";
+
+* {
+  font-family: "Maple Mono NF", "Adwaita Sans", sans-serif;
+  font-size: 14px;
+}
+
+.control-center,
+.notification {
+  background: @base;
+  color: @text;
+  border: 1px solid @surface1;
+  border-radius: 14px;
+}
+
+.control-center {
+  padding: 12px;
+}
+
+.notification {
+  margin: 8px;
+  padding: 12px;
+}
+
+.notification-row {
+  outline: none;
+}
+
+.notification-content {
+  padding: 8px;
+}
+
+.summary {
+  color: @text;
+  font-weight: 700;
+}
+
+.body {
+  color: @subtext1;
+}
+
+.time {
+  color: @overlay1;
+}
+
+.close-button,
+.control-center-clear-all,
+.notification-action,
+.toggle {
+  background: @surface0;
+  color: @text;
+  border: 1px solid @surface1;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.close-button:hover,
+.control-center-clear-all:hover,
+.notification-action:hover,
+.toggle:hover,
+.toggle:checked {
+  background: @surface1;
+  color: @sky;
+}
+
+.critical {
+  border-color: @red;
+}
+

@@ -9,7 +9,7 @@
         ],
         "modules-left": ["hyprland/workspaces", "custom/cava"],
         "modules-center": ["hyprland/window"],
-        "modules-right": ["idle_inhibitor", "cpu", "memory", "temperature", "network", "bluetooth", "pulseaudio", "backlight", "battery", "clock", "tray", "custom/lock", "custom/power"],
+        "modules-right": ["idle_inhibitor", "cpu", "memory", "temperature", "network", "bluetooth", "pulseaudio", "backlight", "battery", "clock", "custom/notifications", "tray", "custom/lock", "custom/power"],
         "hyprland/window": {
             "max-length": 80,
             "separate-outputs": true
@@ -25,6 +25,6 @@
         ],
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["custom/music"],
-        "modules-right": ["tray", "network#laptop", "pulseaudio#laptop", "backlight#laptop", "battery#laptop", "clock#laptop", "custom/lock", "custom/power"]
+        "modules-right": ["custom/notifications", "tray", "network#laptop", "pulseaudio#laptop", "backlight#laptop", "battery#laptop", "clock#laptop", "custom/lock", "custom/power"]
     }
 ]

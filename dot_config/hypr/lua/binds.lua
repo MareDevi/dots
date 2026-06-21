@@ -25,6 +25,7 @@ hl.bind(main_mod .. " + Return", hl.dsp.exec_cmd(defaults.terminal))
 hl.bind(main_mod .. " + Q", hl.dsp.window.close())
 hl.bind(main_mod .. " + E", hl.dsp.exec_cmd(defaults.file_manager))
 hl.bind(main_mod .. " + W", hl.dsp.exec_cmd(defaults.browser))
+hl.bind(main_mod .. " + Space", hl.dsp.exec_cmd(defaults.launcher_apps))
 hl.bind(main_mod .. " + Tab", hl.dsp.exec_cmd(defaults.launcher_toggle))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(defaults.launcher_windows))
 hl.bind(main_mod .. " + Y", hl.dsp.exec_cmd(defaults.launcher_clipboard))
@@ -67,35 +68,37 @@ end
 hl.bind("CTRL + " .. main_mod .. " + left", hs.dsp.focus({ workspace = "-1" }))
 hl.bind("CTRL + " .. main_mod .. " + right", hs.dsp.focus({ workspace = "+1" }))
 
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), {
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/audio up"), {
     locked = true,
     repeating = true,
 })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), {
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/audio down"), {
     locked = true,
     repeating = true,
 })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), {
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/audio mute"), {
     locked = true,
     repeating = true,
 })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), {
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/audio mic-mute"), {
     locked = true,
     repeating = true,
 })
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), {
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/brightness up"), {
     locked = true,
     repeating = true,
 })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), {
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/brightness down"), {
     locked = true,
     repeating = true,
 })
 
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/media next"), { locked = true })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/media play-pause"), { locked = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/media play-pause"), { locked = true })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("~/.config/hypr/scripts/osd/media previous"), { locked = true })
+
+hl.bind(main_mod .. " + N", hl.dsp.exec_cmd("command -v swaync-client >/dev/null 2>&1 && swaync-client -t -sw"))
 
 hl.bind(
     main_mod .. " + SHIFT + S",

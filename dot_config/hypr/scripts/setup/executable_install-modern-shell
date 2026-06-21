@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if command -v paru >/dev/null 2>&1; then
+    paru -S --needed swaync swayosd matugen fuzzel walker hyprpicker
+elif command -v yay >/dev/null 2>&1; then
+    yay -S --needed swaync swayosd matugen fuzzel walker hyprpicker
+else
+    sudo pacman -S --needed swaync swayosd matugen fuzzel walker hyprpicker
+fi
+
+printf '\nInstalled modern shell helpers. Restart Hyprland or run:\n'
+printf '  pkill waybar; waybar &\n'
+printf '  command -v swaync >/dev/null && { pkill dunst 2>/dev/null || true; swaync & }\n'
+printf '  command -v swayosd-server >/dev/null && swayosd-server &\n'
+
