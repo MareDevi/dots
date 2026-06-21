@@ -13,13 +13,13 @@ chezmoi init --apply git@github.com:MareDevi/dots.git
 - Shell startup files: Bash and Zsh
 - Git defaults and signing configuration
 - Zed settings
-- Hyprland, Hypridle, Hyprlock, Hyprpaper, Waybar, Dunst, and wallpaper assets
+- Hyprland, Hypridle, Hyprlock, Hyprpaper, Waybar, SwayNC, and wallpaper assets
 - Neovim configuration
 - GTK, Kvantum, xsettingsd, and Catppuccin theme assets
 - Ghostty, mpv, yazi, zathura, btop, cava, fastfetch, bat, micro, lazygit, satty, and udiskie
 - EasyEffects, pavucontrol, Okular, Atuin config, mise config, and selected Sunshine config
 - VS Code user settings and snippets only
-- Optional modern shell helpers: SwayNC, SwayOSD, Fuzzel, Walker, and Hyprpicker configs/scripts
+- Optional modern shell helpers: SwayNC, SwayOSD, and Hyprpicker configs/scripts
 - Desktop autostart entries and MIME associations
 - fcitx5 input method settings
 - Kvantum theme selection
@@ -37,9 +37,9 @@ or encrypted file after reviewing the generated source.
 
 ## Optional packages
 
-The Hyprland config keeps fallbacks for systems without the newer shell helpers.
-To enable SwayNC notifications, SwayOSD media indicators, Fuzzel launcher, and
-the helper tools while keeping the Catppuccin Macchiato theme:
+The Hyprland config uses SwayNC as the notification center, Vicinae as the
+launcher, and SwayOSD for media indicators while keeping the Catppuccin
+Macchiato theme. To install the optional helper packages:
 
 ```sh
 ~/.config/hypr/scripts/setup/install-modern-shell

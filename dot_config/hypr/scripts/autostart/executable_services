@@ -1,10 +1,6 @@
 ~/.config/hypr/scripts/wallpaper/awww-bootstrap &
 waybar &
-if command -v swaync >/dev/null 2>&1; then
-    swaync &
-else
-    dunst &
-fi
+command -v swaync >/dev/null 2>&1 && swaync &
 command -v swayosd-server >/dev/null 2>&1 && swayosd-server &
 vicinae server &
 fcitx5 -d &
