@@ -1,0 +1,82 @@
+hl.config({
+    general = {
+        border_size = 2,
+        gaps_in = 4,
+        gaps_out = 9,
+        col = {
+            active_border = "rgba(b7bdf8B0)",
+            inactive_border = "rgba(cad3f540)",
+        },
+    },
+    decoration = {
+        rounding = 4,
+        active_opacity = 1,
+        inactive_opacity = 1,
+        blur = {
+            enabled = true,
+            size = 8,
+            passes = 2,
+            ignore_opacity = true,
+            new_optimizations = true,
+            xray = false,
+            noise = 0.02,
+            contrast = 0.9,
+            brightness = 1.0,
+            vibrancy = 0.2,
+            vibrancy_darkness = 0.1,
+            popups = true,
+            popups_ignorealpha = 0.2,
+            special = true,
+        },
+        shadow = {
+            enabled = false,
+            range = 10,
+            scale = 2,
+            render_power = 5,
+            color = "rgb(363a4f)",
+            color_inactive = "rgb(181926)",
+        },
+        dim_inactive = false,
+        dim_strength = 0.05,
+    },
+    group = {
+        col = {
+            border_inactive = "rgba(b7bdf869)",
+            border_active = {
+                colors = {
+                    "rgba(cad3f5ee)",
+                    "rgba(b7bdf869)",
+                    "rgba(b7bdf869)",
+                    "rgba(cad3f5ee)",
+                },
+                angle = 45,
+            },
+            border_locked_inactive = "rgba(b7bdf869)",
+            border_locked_active = {
+                colors = {
+                    "rgba(cad3f5ee)",
+                    "rgba(b7bdf869)",
+                    "rgba(b7bdf869)",
+                    "rgba(cad3f5ee)",
+                },
+                angle = 45,
+            },
+        },
+        groupbar = {
+            gradients = true,
+            gradient_rounding = 7,
+            indicator_height = 0,
+            gradient_round_only_edges = true,
+            col = {
+                active = "rgba(b7bdf8CC)",
+                inactive = "rgba(b8c0e099)",
+                locked_active = "rgba(ee99a0CC)",
+                locked_inactive = "rgba(b8c0e099)",
+            },
+            font_family = "Maple Mono NF",
+            font_size = 15,
+            text_color = "rgb(181926)",
+            height = 20,
+        },
+    },
+})

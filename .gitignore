@@ -3,6 +3,11 @@
 *~
 *.swp
 *.tmp
+__pycache__/
+*.pyc
+.alma-snapshots/
+**/.alma-snapshots/
+**/.git/
 
 # Never commit raw secret material.
 *.pem
@@ -31,4 +36,4 @@ private_dot_config/**/Network Persistent State
 private_dot_config/**/Preferences
 private_dot_config/**/Trust Tokens*
 private_dot_config/**/SharedStorage*
-
+private_dot_config/**/__pycache__/

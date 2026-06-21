@@ -1,0 +1,24 @@
+[general]
+fullscreen = "current-screen"
+floating-hack = true
+early-exit = true
+corner-roundness = 8
+initial-tool = "arrow"
+copy-command = "wl-copy"
+annotation-size-factor = 1
+output-filename = "~/Pictures/Screenshots/satty-%Y-%m-%d_%H:%M:%S.png"
+save-after-copy = true
+default-hide-toolbars = false
+focus-toggles-toolbars = false
+default-fill-shapes = false
+primary-highlighter = "block"
+disable-notifications = true
+actions-on-enter = ["save-to-clipboard", "save-to-file", "exit"]
+actions-on-escape = ["exit"]
+actions-on-right-click = ["save-to-clipboard", "save-to-file", "exit"]
+no-window-decoration = true
+brush-smooth-history-size = 5
+zoom-factor = 1.0
+pan-step-size = 50.0
+text-move-length = 50.0
+input-scale = 1.0

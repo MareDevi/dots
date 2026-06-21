@@ -1,0 +1,18 @@
+program_options:
+  automount: true
+  notify: true
+  tray: auto
+  menu: flat
+  file_manager: nautilus
+  password_cache: 30
+  terminal: "ghostty -e"
+
+notifications:
+  timeout: 3
+  device_mounted: 3
+  device_unmounted: 2
+  device_added: 2
+  device_removed: 2
+  job_failed: -1
+
+quickmenu_actions: [mount, unmount, unlock, terminal, detach, delete]

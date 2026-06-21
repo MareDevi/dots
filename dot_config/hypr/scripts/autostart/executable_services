@@ -1,0 +1,10 @@
+~/.config/hypr/scripts/wallpaper/awww-bootstrap &
+waybar &
+dunst &
+vicinae server &
+fcitx5 -d &
+hypridle &
+udiskie &
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &
+easyeffects --daemon &
+uwsm app -- sunshine &

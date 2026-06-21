@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+mkdir -p "$HOME/Pictures/Screenshots"
+
+geometry="$(slurp -c '#8aadf4ff')" || exit 0
+[[ -n "$geometry" ]] || exit 0
+
+tmpfile="$(mktemp --tmpdir="${XDG_RUNTIME_DIR:-/tmp}" satty-region.XXXXXX.png)"
+trap 'rm -f "$tmpfile"' EXIT
+
+if ! grim -g "$geometry" "$tmpfile"; then
+    notify-send "Screenshot failed" "grim could not capture the selected region"
+    exit 1
+fi
+
+if ! satty --filename "$tmpfile"; then
+    notify-send "Screenshot failed" "satty could not open the screenshot"
+    exit 1
+fi

@@ -1,0 +1,8 @@
+require("lua.monitors")
+require("lua.env")
+require("lua.decoration")
+require("lua.animations")
+require("lua.binds")
+require("lua.misc")
+require("lua.workspaces")
+require("lua.rules")

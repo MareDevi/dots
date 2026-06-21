@@ -1,0 +1,156 @@
+{
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "sort-by-number": true,
+        "on-click": "activate",
+        "format": " {icon} ",
+        "format-icons": {
+            "active": "",
+            "urgent": "",
+            "default": ""
+        }
+    },
+    "hyprland/window": {
+        "max-length": 60,
+        "separate-outputs": true
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "custom/music": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}' 2>/dev/null",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+    },
+    "clock": {
+        "timezone": "Asia/Shanghai",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "  {:%d/%m/%Y}",
+        "format": "󰥔  {:%H:%M}"
+    },
+    "clock#laptop": {
+        "timezone": "Asia/Shanghai",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "  {:%d/%m/%Y}",
+        "format": "󰥔  {:%H:%M}"
+    },
+    "backlight": {
+        "device": "nvidia_0",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "backlight#laptop": {
+        "device": "nvidia_0",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "bat": "BAT1",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "󰂄",
+        "format-plugged": "󱈏 ",
+        "format-alt": "{capacity}% {icon}",
+        "format-icons": ["󰂃", "󰁺",  "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "battery#laptop": {
+        "bat": "BAT1",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "󰂄",
+        "format-plugged": "󱈏 ",
+        "format-alt": "{capacity}% {icon}",
+        "format-icons": ["󰂃", "󰁺",  "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "pulseaudio#laptop": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} via {gwaddr}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "network#laptop": {
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} via {gwaddr}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "",
+        "format-connected": " {num_connections}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  {}%",
+        "tooltip": false
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": " {temperatureC}°",
+        "format-critical": " {temperatureC}°"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "custom/cava": {
+        "exec": "$HOME/.config/waybar/scripts/cava.sh",
+        "format": "{}",
+        "return-type": "plain",
+        "restart-interval": 1,
+        "tooltip": false,
+        "on-click": "ghostty --class center-float-mini -e cava",
+        "on-click-right": "command -v qpwgraph >/dev/null 2>&1 && qpwgraph",
+        "on-click-middle": "easyeffects"
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "hyprlock",
+        "format": ""
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit",
+        "format": "󰐥"
+    }
+}

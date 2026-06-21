@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+set -u
+
+wallpaper_dir="${HOME}/.config/hypr/walls"
+fallback_wallpaper="${wallpaper_dir}/flowers.png"
+lockscreen_dir="${HOME}/.cache/vicinae/awww-switcher"
+lockscreen_wall="${lockscreen_dir}/postprod.jpg"
+internal_output="eDP-1"
+external_output="HDMI-A-1"
+
+set_wallpaper() {
+    local output="$1"
+    local image="$2"
+
+    [ -f "${image}" ] || return 0
+
+    awww img "${image}" \
+        --outputs "${output}" \
+        --transition-type fade \
+        --transition-step 45 \
+        --transition-duration 2 \
+        --transition-fps 60 >/dev/null 2>&1
+}
+
+pick_random_wallpapers() {
+    local -a images
+    mapfile -t images < <(
+        find "${wallpaper_dir}" -maxdepth 1 -type f \
+            \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.gif' \) \
+            | shuf
+    )
+
+    if [ "${#images[@]}" -eq 0 ]; then
+        images=("${fallback_wallpaper}")
+    fi
+
+    internal_pick="${images[0]}"
+
+    if [ "${#images[@]}" -ge 2 ]; then
+        external_pick="${images[1]}"
+    else
+        external_pick="${images[0]}"
+    fi
+}
+
+mkdir -p "${lockscreen_dir}"
+pick_random_wallpapers
+
+if awww query 2>/dev/null | grep -q "${internal_output}"; then
+    set_wallpaper "${internal_output}" "${internal_pick}"
+fi
+
+if awww query 2>/dev/null | grep -q "${external_output}"; then
+    set_wallpaper "${external_output}" "${external_pick}"
+fi
+
+if command -v magick >/dev/null 2>&1 && [ -f "${external_pick}" ]; then
+    magick "${external_pick}" -blur "10x10" -brightness-contrast -20% "${lockscreen_wall}"
+fi

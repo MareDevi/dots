@@ -1,0 +1,30 @@
+[
+    {
+        "layer": "top",
+        "position": "top",
+        "output": "HDMI-A-1",
+        "height": 45,
+        "include": [
+            "~/.config/waybar/modules/common.jsonc"
+        ],
+        "modules-left": ["hyprland/workspaces", "custom/cava"],
+        "modules-center": ["hyprland/window"],
+        "modules-right": ["idle_inhibitor", "cpu", "memory", "temperature", "network", "bluetooth", "pulseaudio", "backlight", "battery", "clock", "tray", "custom/lock", "custom/power"],
+        "hyprland/window": {
+            "max-length": 80,
+            "separate-outputs": true
+        }
+    },
+    {
+        "layer": "top",
+        "position": "top",
+        "output": "eDP-1",
+        "height": 45,
+        "include": [
+            "~/.config/waybar/modules/common.jsonc"
+        ],
+        "modules-left": ["hyprland/workspaces"],
+        "modules-center": ["custom/music"],
+        "modules-right": ["tray", "network#laptop", "pulseaudio#laptop", "backlight#laptop", "battery#laptop", "clock#laptop", "custom/lock", "custom/power"]
+    }
+]

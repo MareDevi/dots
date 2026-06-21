@@ -13,6 +13,11 @@ chezmoi init --apply git@github.com:MareDevi/dots.git
 - Shell startup files: Bash and Zsh
 - Git defaults and signing configuration
 - Zed settings
+- Hyprland, Hypridle, Hyprlock, Hyprpaper, Waybar, Dunst, and wallpaper assets
+- Neovim configuration
+- GTK, Kvantum, xsettingsd, and Catppuccin theme assets
+- Ghostty, mpv, yazi, zathura, btop, cava, fastfetch, bat, micro, lazygit, satty, and udiskie
+- Desktop autostart entries and MIME associations
 - fcitx5 input method settings
 - Kvantum theme selection
 - XDG user directories
@@ -24,4 +29,3 @@ Credentials, browser or Electron app state, SSH/GPG material, GitHub CLI auth,
 rclone config, WakaTime config, and similar files are intentionally excluded.
 If a secret-backed config needs to be shared later, add it as a chezmoi template
 or encrypted file after reviewing the generated source.
-

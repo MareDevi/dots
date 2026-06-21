@@ -1,0 +1,12 @@
+{
+	"custom/cava": {
+		"exec": "$HOME/.config/waybar/scripts/cava.sh",
+		"format": "{}",
+		"return-type": "plain",
+		"restart-interval": 1,
+		"tooltip": false,
+		"on-click": "ghostty --class center-float-mini -e cava",
+		"on-click-right": "command -v qpwgraph >/dev/null 2>&1 && qpwgraph",
+		"on-click-middle": "easyeffects"
+	}
+}

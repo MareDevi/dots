@@ -3,6 +3,10 @@
 
 README.md
 
+.alma-snapshots/**
+.config/**/.alma-snapshots/**
+.config/**/__pycache__/**
+
 .ssh/**
 .gnupg/**
 .aws/**

@@ -1,0 +1,216 @@
+@import "color.css";
+
+* {
+  font-family: Maple Mono NF;
+  font-size: 14px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 5px 5px;
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @sky;
+  border-radius: 1rem;
+}
+
+#workspaces button.urgent {
+  color: @red;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+#window,
+#custom-music,
+#tray,
+#idle_inhibitor,
+#cpu,
+#memory,
+#temperature,
+#network,
+#bluetooth,
+#backlight,
+#clock,
+#battery,
+#custom-cava,
+#pulseaudio,
+#custom-lock,
+#custom-power {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+}
+
+#window {
+  color: @subtext1;
+  border-radius: 1rem;
+}
+
+#clock {
+  color: @blue;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  background-color: @surface1;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight,
+#battery {
+  border-radius: 0;
+}
+
+#pulseaudio {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#pulseaudio.muted {
+  color: @overlay1;
+}
+
+#network {
+  color: @teal;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network.laptop {
+  border-radius: 1rem;
+  margin-right: 0.75rem;
+}
+
+#bluetooth {
+  color: @sapphire;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#bluetooth.disabled {
+  color: @overlay0;
+}
+
+#pulseaudio.laptop {
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 0;
+}
+
+#backlight.laptop,
+#battery.laptop {
+  border-radius: 0;
+}
+
+#clock.laptop {
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 0.75rem;
+}
+
+#cpu {
+  color: @peach;
+  border-radius: 0;
+}
+
+#memory {
+  color: @pink;
+  border-radius: 0;
+}
+
+#temperature {
+  color: @yellow;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#temperature.critical {
+  color: @red;
+}
+
+#idle_inhibitor {
+  color: @lavender;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#idle_inhibitor.activated {
+  color: @green;
+}
+
+#custom-cava {
+  color: @mauve;
+  border-radius: 1rem;
+  padding: 0.5rem 0.7rem;
+  margin-left: 0;
+}
+
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
+#custom-lock {
+  border-radius: 1rem 0px 0px 1rem;
+  color: @lavender;
+}
+
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @red;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
+
+tooltip {
+  background-color: @mantle;
+  border: 1px solid @surface1;
+  border-radius: 1rem;
+}
+
+tooltip label {
+  color: @text;
+}
