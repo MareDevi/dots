@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=OpenHuman
+Terminal=false
+NoDisplay=true
+MimeType=x-scheme-handler/openhuman
+Exec="/home/maredevi/Downloads/OpenHuman_0.53.43_amd64.AppImage" %u

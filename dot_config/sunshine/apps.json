@@ -1,0 +1,44 @@
+{
+    "apps": [
+        {
+            "auto-detach": true,
+            "exclude-global-prep-cmd": false,
+            "exit-timeout": 5,
+            "image-path": "/home/maredevi/.config/hypr/walls/anime-skull.png",
+            "name": "Desktop",
+            "prep-cmd": [
+                {
+                    "do": "/home/maredevi/.config/hypr/scripts/sunshine/stream-mode-on.sh",
+                    "undo": "/home/maredevi/.config/hypr/scripts/sunshine/stream-mode-off.sh"
+                }
+            ],
+            "wait-all": true
+        },
+        {
+            "image-path": "desktop.png",
+            "name": "Low Res Desktop",
+            "prep-cmd": [
+                {
+                    "do": "xrandr --output HDMI-1 --mode 1920x1080",
+                    "undo": "xrandr --output HDMI-1 --mode 1920x1200"
+                }
+            ]
+        },
+        {
+            "detached": [
+                "setsid steam steam://open/bigpicture"
+            ],
+            "image-path": "steam.png",
+            "name": "Steam Big Picture",
+            "prep-cmd": [
+                {
+                    "do": "",
+                    "undo": "setsid steam steam://close/bigpicture"
+                }
+            ]
+        }
+    ],
+    "env": {
+        "PATH": "$(PATH):$(HOME)/.local/bin"
+    }
+}

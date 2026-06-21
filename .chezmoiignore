@@ -17,6 +17,20 @@ README.md
 .config/gh/hosts.yml
 .config/rclone/rclone.conf
 .config/pulse/cookie
+.config/sunshine/credentials/**
+.config/sunshine/sunshine_state.json
+.config/sunshine/*.log
+
+.config/Code/User/mcp.json
+.config/Code/User/**/mcp.json
+.config/Code/User/History/**
+.config/Code/User/globalStorage/**
+.config/Code/User/workspaceStorage/**
+.config/Code/User/sync/**
+
+.local/share/atuin/**
+.local/share/mise/**
+.local/share/keyrings/**
 
 # Browser/Electron application state often contains cookies, device IDs,
 # tokens, recent files, and local databases.

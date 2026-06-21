@@ -1,0 +1,17 @@
+[Presets]
+lastLoadedOutputPreset=GentleDynamics
+
+[StreamInputs]
+inputDevice=alsa_output.pci-0000_00_1f.3.analog-stereo
+
+[StreamOutputs]
+mostUsedPresets=Sony,GentleDynamics,GentleDynamics Feather Loudness,GentleDynamics Dialogue Clarity Engine,Video
+outputDevice=alsa_output.pci-0000_00_1f.3.analog-stereo
+plugins=filter#0,multiband_compressor#0,limiter#0,level_meter#0
+usedPresets=Video:2,Sony:4,GentleDynamics:3,GentleDynamics Dialogue Clarity Engine:2,GentleDynamics Feather Loudness:2,Music:1,Bose:1
+visiblePlugin=filter#0
+
+[Window]
+height=1373
+visiblePresetSheetPage=autoloadingPage
+width=1263

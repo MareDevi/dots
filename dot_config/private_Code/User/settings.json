@@ -1,0 +1,67 @@
+{
+  "editor.fontFamily": "Maple Mono NF",
+  "editor.fontSize": 16,
+  "explorer.confirmDelete": false,
+  "C_Cpp.default.compilerPath": "C:/Users/maredevi/scoop/apps/gcc/current/bin/gcc.exe",
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "gitlens.codeLens.symbolScopes": [
+      "!Module"
+    ],
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off"
+  },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "editor.inlayHints.enabled": "off",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
+  "editor.wordWrap": "off",
+  "diffEditor.wordWrap": "off",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+  "github.copilot.chat.localeOverride": "zh-CN",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "chat.editing.confirmEditRequestRemoval": false,
+  "gitlens.ai.model": "vscode",
+"gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+],
+  "chat.editing.confirmEditRequestRetry": false,
+  "code-runner.runInTerminal": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "leetcode.endpoint": "leetcode-cn",
+  "leetcode.workspaceFolder": "/home/MareDevi/dev/study/leetcode",
+  "leetcode.colorizeProblems": false,
+  "leetcode.filePath": {
+    "cpp": {
+      "folder": "cpp",
+      "filename": "solution_${id}.${ext}"
+    },
+    "rust": {
+      "folder": "rust/src/bin",
+      "filename": "solution_${id}.${ext}"
+    },
+    "default": {
+      "folder": "",
+      "filename": "solution_${id}.${ext}"
+    }
+  },
+  "leetcode.hint.commandShortcut": false,
+  "workbench.iconTheme": "catppuccin-perfect-macchiato",
+  "chat.tools.terminal.autoApprove": {
+    "/^ar p Astro\\.Studio_1\\.0\\.12_amd64\\.deb data\\.tar\\.gz \\| tar -tzf - \\| head -n 120$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  },
+  "redhat.telemetry.enabled": true,
+  "claudeCode.preferredLocation": "panel",
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  }
+}

@@ -30,6 +30,15 @@ dot_ssh/
 dot_wakatime.cfg
 private_dot_config/gh/hosts.yml
 private_dot_config/rclone/rclone.conf
+private_dot_config/sunshine/credentials/
+private_dot_config/sunshine/sunshine_state.json
+private_dot_config/sunshine/*.log
+private_dot_config/Code/User/mcp.json
+private_dot_config/Code/User/**/mcp.json
+private_dot_config/Code/User/History/
+private_dot_config/Code/User/globalStorage/
+private_dot_config/Code/User/workspaceStorage/
+private_dot_config/Code/User/sync/
 private_dot_config/**/Cookies*
 private_dot_config/**/Local State
 private_dot_config/**/Network Persistent State
@@ -37,3 +46,9 @@ private_dot_config/**/Preferences
 private_dot_config/**/Trust Tokens*
 private_dot_config/**/SharedStorage*
 private_dot_config/**/__pycache__/
+dot_local/share/atuin/
+dot_local/share/mise/
+dot_local/share/keyrings/
+private_dot_local/private_share/atuin/
+private_dot_local/private_share/mise/
+private_dot_local/private_share/keyrings/

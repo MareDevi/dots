@@ -1,0 +1,19 @@
+{
+    "LeetCode Rust Template": {
+        "prefix": "lc",
+        "body": [
+            "#[allow(unused)]",
+            "struct Solution;",
+            "",
+            "#[allow(unused)]",
+            "${TM_SELECTED_TEXT}",
+            "",
+            "fn main() {",
+            "    // ⬇️ TODO: Test case",
+            "    // let result = Solution::${1:func_name}(${2:args});",
+            "    // println!(\"Result: {:?}\", result);",
+            "}"
+        ],
+        "description": "Safe wrapper with no attribute errors"
+    }
+}

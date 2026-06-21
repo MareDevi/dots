@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Guitar Pro 8
+Type=Application
+Exec=bottles-cli run -b 'Applications' -p 'GuitarPro'
+Icon=GuitarPro
+Terminal=false
+Categories=AudioVideo;Audio;

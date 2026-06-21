@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Development;
+Comment=A beautiful markdown editor for Astro content collections
+Exec=env WEBKIT_DISABLE_DMABUF_RENDERER=1 astro-editor
+StartupWMClass=astro-editor
+Icon=astro-editor
+Name=Astro Editor
+Terminal=false
+Type=Application
